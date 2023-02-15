@@ -34,3 +34,13 @@ if  edad >=mayor:
         print(f"tienes {edad}")
 else:
     print("no eres mayor de edad")
+
+
+#else if
+
+if  edad >=mayor:
+    print("eres mayor de edad")
+elif edad == mayor:
+    print("tienes exactamente 18")
+else:
+    print("no eres mayor de edad")
