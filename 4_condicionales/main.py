@@ -22,3 +22,15 @@ if year >= 2023:
 else 
     print("no estas al año")
 
+#ifs anidados
+
+mayor = 18
+edad = 20
+if  edad >=mayor:
+    print("eres mayor de edad")
+    if edad == mayor:
+        print("tienes exactamente 18")
+    else:
+        print(f"tienes {edad}")
+else:
+    print("no eres mayor de edad")
