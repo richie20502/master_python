@@ -44,3 +44,15 @@ elif edad == mayor:
     print("tienes exactamente 18")
 else:
     print("no eres mayor de edad")
+
+#operadores logicos
+
+ed1 = 18
+ed2 = 65
+ed3 = 17
+
+if  ed3 >= ed1 and ed3 <= ed1:
+    print("cumples las edades")
+else:
+    print("no cumples las edades")
+
