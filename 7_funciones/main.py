@@ -34,6 +34,19 @@ def tabla(numero):
     
     print("\n")
 
+#ejercicio 3.1
 tabla(4)
 for numero_t in range(1, 11):
     tabla(numero_t)
+
+#ejercicio numero 4
+#parametros opcionales
+def getEmpledo(nombre, dni = None):
+    print("Empleado")
+    print(f"Nombre: {nombre}")
+
+    if dni != None:
+        print(f"DNI: {dni}")
+
+
+getEmpledo("jose", 9876)
