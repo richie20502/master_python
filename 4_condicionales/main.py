@@ -19,7 +19,7 @@ year = int(input("dime el año en el que estamos ?"))
 
 if year >= 2023:
     print("estamos en 2023 en ")
-else 
+else:
     print("no estas al año")
 
 #ifs anidados
