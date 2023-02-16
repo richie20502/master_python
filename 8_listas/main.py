@@ -16,3 +16,7 @@ print(nombre[3])
 
 numeros.append("89")
 print(numeros)
+
+#recorrer lista
+for numero in numeros:
+    print(f"{numeros.index(numero) + 1} . {numero}")
