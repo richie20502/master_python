@@ -82,3 +82,18 @@ def calculadora(n1,n2,basicas = False):
 
 cad=calculadora(5,6)
 print(cad)
+
+# ejercicio 7
+
+def getNombre(nombre):
+    texto = f"El nombre es: {nombre}"
+    return texto
+
+def getApellidos(apellidos):
+    texto = f"Los apellidos son: {apellidos}"
+    return texto
+
+def devuelveTodo(nombre, apellido):
+    texto = getNombre(nombre) +"  " + getApellidos(apellido)
+
+print(devuelveTodo("Ricardo","Lugo"))
