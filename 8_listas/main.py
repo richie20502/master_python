@@ -20,3 +20,28 @@ print(numeros)
 #recorrer lista
 for numero in numeros:
     print(f"{numeros.index(numero) + 1} . {numero}")
+
+#listas multidimensionales
+
+nombres = [
+    [
+        "n1",
+        "n2"
+    ],
+    [
+        "n3",
+        "n4"
+    ],
+    [
+        "n5",
+        "n6"
+    ],
+
+]
+print(nombres)
+print(nombres[0][1])
+
+for nombre in nombres:
+    for el in nombre:
+        print(el)
+print("\n")
