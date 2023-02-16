@@ -24,3 +24,16 @@ nombre = input("cual es tu nombre ?")
 edad = int(input("Cuantos años tienes ?"))
 
 mostrarTuNombre(nombre,edad)
+
+#ejercicio 3
+
+def tabla(numero):
+    for con in range(11):
+        ope = numero*con
+        print(f"{numero} x {con}  =  {ope}")
+    
+    print("\n")
+
+tabla(4)
+for numero_t in range(1, 11):
+    tabla(numero_t)
