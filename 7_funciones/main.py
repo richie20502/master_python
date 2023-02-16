@@ -97,3 +97,9 @@ def devuelveTodo(nombre, apellido):
     texto = getNombre(nombre) +"  " + getApellidos(apellido)
 
 print(devuelveTodo("Ricardo","Lugo"))
+
+#ejemplo 8 funciones lambda
+
+dime_el_year = lambda year: f"el año es {year*100}"
+
+print(dime_el_year(2034))
