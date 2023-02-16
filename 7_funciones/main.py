@@ -48,5 +48,37 @@ def getEmpledo(nombre, dni = None):
     if dni != None:
         print(f"DNI: {dni}")
 
-
 getEmpledo("jose", 9876)
+
+#ejemplo 5 paramaetros opcionales y return (devolver datos)
+
+def saludo(nombre):
+    saludo = f"hola, saludos {nombre}"
+    return saludo
+
+print(saludo("Ricardo lugo"))
+
+
+def calculadora(n1,n2,basicas = False):
+    suma = n1 + n2
+    resta = n1 - n2
+    multi = n1 * n2
+    divi = n1 / n2
+    cadena = ""
+
+    if basicas != False:
+        cadena += "suma: " +str(suma)
+        cadena += "\n"
+        cadena += "resta: "+ str(resta)
+        cadena += "\n"
+    else:
+        cadena += "multiplicacion: "+str(multi)
+        cadena += "\n"
+        cadena += "division: "+str(divi)
+        cadena += "\n"
+
+    return cadena
+
+
+cad=calculadora(5,6)
+print(cad)
