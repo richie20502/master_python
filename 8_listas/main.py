@@ -11,3 +11,8 @@ print(nombre)
 #indices
 print(numeros[0])
 print(nombre[3])
+
+#agregar elemento a lista
+
+numeros.append("89")
+print(numeros)
