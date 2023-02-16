@@ -10,3 +10,17 @@ def muestraNombre():
 
 #invocar funcion
 muestraNombre()
+
+#ejemplo 2
+def mostrarTuNombre(nombre, edad):
+    print(f"tu nombre es: {nombre}")
+
+    if edad >= 18:
+        print("ya eres mayor de edad")
+    else:
+        print("eres menor de edad")
+
+nombre = input("cual es tu nombre ?")
+edad = int(input("Cuantos años tienes ?"))
+
+mostrarTuNombre(nombre,edad)
