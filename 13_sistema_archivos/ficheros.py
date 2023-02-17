@@ -35,3 +35,9 @@ direc_original = str(pathlib.Path().absolute()) + '/fichero_texto.txt'
 direc_nueva = str(pathlib.Path().absolute()) + '/fichero_copia.txt'
 
 shutil.copyfile(direc_original, direc_nueva)
+
+#Eliminar
+#import os
+
+#direc_nueva = str(pathlib.Path().absolute()) + '/fichero_copia.txt'
+#os.remove(direc_nueva)
