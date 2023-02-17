@@ -1,5 +1,8 @@
 from io import open
 import pathlib
+# modulo para copiaer archivos
+import shutil
+
 #escribir archivo
 direc = str(pathlib.Path().absolute()) + '/fichero_texto.txt'
 #print(direc)
@@ -23,3 +26,12 @@ archivo_leer.close()
 
 for frase in lista:
     print("- "+ frase)
+
+
+#copiar archivo 
+
+
+direc_original = str(pathlib.Path().absolute()) + '/fichero_texto.txt'
+direc_nueva = str(pathlib.Path().absolute()) + '/fichero_copia.txt'
+
+shutil.copyfile(direc_original, direc_nueva)
