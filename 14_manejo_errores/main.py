@@ -24,3 +24,19 @@ except ValueError:
 except Exception as e:
     print(type(e))
     print("Ha ocurrido un error: ",type(e).__name__)
+
+#excepciones personalizadas
+try:
+    nombre = input("ingresa el nombre")
+    edad= input("ingresa edad")
+
+    if edad < 5  or edad > 110:
+        raise ValueError("La edad introduccida no es real")
+    elif len(nombre) <= 1:
+        raise ValueError("El nombre no esta completo")
+    else:
+        print("Bienvenido !!")
+except ValueError:
+    print("introduce los datos correctos")
+except Exception as e:
+    print("Existe error", e)
