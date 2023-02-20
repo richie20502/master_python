@@ -16,3 +16,6 @@ if type(carro2) == Coche:
     print("es un objeto correcto")
 else:
     print("no es un objeto")
+
+#Visibilidad
+
