@@ -8,7 +8,9 @@ class Coche:
     caballaje = 500
     plazas = 2
 
+    #atributo publico
     s_p = "atributo publico"
+    #atributo privado
     __s_pr = "atributo privado"
 
     def __init__(self, color, marca, modelo, velocidad, caballaje, plazas):
