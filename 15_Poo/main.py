@@ -9,6 +9,17 @@ class Coche:
     plazas = 2
 
     #Metodos, son acciones que hace el objeto (coche)
+    def setColor(self, color):
+        self.color = color
+    
+    def getColor(self):
+        return self.color
+    
+    def setModelo(self, modelo):
+        self.modelo = modelo
+    
+    def getModelo(self):
+        return self.modelo
 
     def acelerar(self):
         self.velocidad += 1
