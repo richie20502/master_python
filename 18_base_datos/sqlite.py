@@ -16,7 +16,19 @@ cursor.execute("CREATE TABLE IF NOT EXISTS PRODUCTORS("+
 "precio int(255)"+
 ")")
 
+#guardar cambios
 conexion.commit()
+
+#insertar datos
+cursor.execute("INSERT INTO productos VALUES(null, 'primer producto', 'Descripcion de', 200)")
+
+#guardar cambios
+conexion.commit()
+cursor.execute("SELECT * FROM productos;")
+productos= cursor.fetchall()
+
+for producto in productos:
+    print(producto)
 
 #cerrar conexion
 conexion.close()
