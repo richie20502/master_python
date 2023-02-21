@@ -30,5 +30,12 @@ coches = [
 
 cursor.executemany("INSERT INTO vehiculos VALUES (null, %s, %s, %s)", coches)
 
-
 database.commit()
+
+cursor.execute("SELECT * FROM vehiculos")
+
+result = cursor.fetchall()
+
+print("---- TODOS LOS CARROS ----")
+for coche in result:
+    print(coche)
