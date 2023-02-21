@@ -18,3 +18,17 @@ CREATE TABLE IF NOT EXISTS vehiculos(
     CONSTRAINT pk_vehiculo PRIMARY KEY (id)
 )
 """)
+
+#cursor.execute("""INSERT INTO vehiculos VALUES(null, 'opel','astra',23345)""")
+
+coches = [
+    ('seat', 'ibiza', 7888 ),
+    ('renault', 'clio', 6788 ),
+    ('citro', 'sxsx', 78976 ),
+    ('mercedes', 'clase r', 56787 ),
+]
+
+cursor.executemany("INSERT INTO vehiculos VALUES (null, %s, %s, %s)", coches)
+
+
+database.commit()
