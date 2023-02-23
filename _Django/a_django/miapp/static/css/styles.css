@@ -16,11 +16,28 @@ header{
     margin: 0px auto;
 }
 
+#logotipo {
+    width: 35%;
+    height: 140px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#logotipo img{
+    display: block;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+
+}
+
 #logotipo h1{
     display: block;
+    float: left;
+    margin-top: 40px;
+    margin-left: 20px;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    font-weight: normal;
-    color: #42a096;
+    font-weight: lighter;
+    color: #2ba977;
 }
 
