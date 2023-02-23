@@ -91,6 +91,8 @@ def articulos(request):
     #en el id lt= menores he iguales que id
     #articulos = Article.objects.filter(id__lte=10)
 
+    #articulos = Article.objects.filter(id=1).exclude(public=True)
+
 
 
     return render(request,'articulos.html',{
