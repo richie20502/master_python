@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 
 layout = """
     <h1>Inicio sitio</h1> 
@@ -39,7 +39,11 @@ def index(request):
 def hola_mundo(request):
     return HttpResponse( layout +"hola mundo Django")
 
-def pagina(request):
+def pagina(request, redirigir=0):
+
+    if redirigir ==1:
+        return redirect('/contacto/richie/recillas')
+        
     return HttpResponse(layout +"""
     <h1>pagina web</h1> 
     """)
