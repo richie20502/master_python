@@ -6,7 +6,13 @@ Articulos
 <h1 class="title">Listado de articulos</h1>
     <ul>
         {% for articulo in articulos  %}
-            <li> {{articulo.id}}. {{articulo.title}} </li>
+            <li> 
+                <h4>{{articulo.id}}. {{articulo.title}}</h4>
+                <p>
+                    {{articulo.content}}
+                    <a href="{% url 'borrar-articulo' id=articulo.id %}">Eliminar</a>
+                </p>
+            </li>
         {% endfor %}
     </ul>
 {% endblock  %}
