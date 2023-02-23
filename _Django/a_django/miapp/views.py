@@ -1,5 +1,22 @@
 from django.shortcuts import render, HttpResponse
 
+layout = """
+    <h1>Inicio sitio</h1> 
+    <hr/>
+    <ul>
+        <li>
+            <a href="/inicio">Inicio</a>
+        </li>
+        <li>
+            <a href="/hola">Hola </a>
+        </li>
+        <li>
+            <a href="/pagina">Pagina</a>
+        </li>
+    </ul>
+    <hr/>
+"""
+
 # Create your views here.
 def index(request):
     html ="""
@@ -14,12 +31,12 @@ def index(request):
         year += 1
     
     html += "</ul>"
-    return HttpResponse(html)
+    return HttpResponse(layout+html)
 
 def hola_mundo(request):
-    return HttpResponse("hola mundo Django")
+    return HttpResponse( layout +"hola mundo Django")
 
 def pagina(request):
-    return HttpResponse("""
+    return HttpResponse(layout +"""
     <h1>pagina web</h1> 
     """)
