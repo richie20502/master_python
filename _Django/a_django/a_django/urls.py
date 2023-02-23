@@ -17,10 +17,13 @@ from django.contrib import admin
 from django.urls import path
 
 
-from miapp import views
+#from miapp import views
+import miapp.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hola/',views.hola_mundo, name="hola_mundo")
-
+    path('',miapp.views.index, name="index"),
+    path('inicio/',miapp.views.index, name="inicio"),
+    path('hola/',miapp.views.hola_mundo, name="hola_mundo"),
+    path('pagina/',miapp.views.pagina, name="pagina")
 ]
