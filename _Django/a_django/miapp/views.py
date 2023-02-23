@@ -17,8 +17,9 @@ def index(request):
         year += 1
     
     html += "</ul>"
+    lenguajes =['php','js','python','java']
     return render(request, 'index.html',{
-        'nombre': "nombres"
+        'nombre': "nombres", 'lenguajes': lenguajes
     })
 
 def hola_mundo(request):
