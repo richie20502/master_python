@@ -7,26 +7,31 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
     </head>
     <body>
-        <h1>Inicio sitio</h1> 
-        <hr/>
-        <ul>
-            <li>
-                <a href="/inicio">Inicio</a>
-            </li>
-            <li>
-                <a href="/hola">Hola </a>
-            </li>
-            <li>
-                <a href="/pagina">Pagina</a>
-            </li>
-            <li>
-                <a href="/contacto">Contacto</a>
-            </li>
-        </ul>
-        <hr/>
 
+        <header>
+            <div id="logotipo">
+
+                <h1> Sitio web con Django</h1>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="/hola">Hola </a>
+                </li>
+                <li>
+                    <a href="/pagina">Pagina</a>
+                </li>
+                <li>
+                    <a href="/contacto">Contacto</a>
+                </li>
+            </ul>
+        </nav>
         <div id="content">
-
+            <h2 class="title"> Titulo de prueba</h2>
             {% block content %} 
 
             {% endblock  %}
