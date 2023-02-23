@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
+from miapp.models import Article, Category
 
 layout = """
     
@@ -39,3 +40,13 @@ def pagina(request, redirigir=0):
 
 def contacto(request, nombre="nombre", ap="apellido"):
     return HttpResponse(layout + f"<h1>Contacto {nombre} {ap} </h1>")
+
+
+def crear_articulo(request):
+    articulo = Article(
+        title = "primer articulo",
+        content = "contenido del articulo",
+        public = True
+    )
+    articulo.save()
+    return HttpResponse("articulo :")
