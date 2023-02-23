@@ -72,6 +72,27 @@ def editar_articulo(request, id):
 def articulos(request):
     articulos = Article.objects.all()
     #articulos = Article.objects.order_by('-id')[:3]
+    #articulos = Article.objects.filter(title='Batman',id=2)
+    #en el title contenga articulo 
+    #articulos = Article.objects.filter(title__contains="articulo")
+
+    #en el title contenga exactamente articulo
+    #articulos = Article.objects.filter(title__exact="articulo")
+
+    #en el id gt=graden than contenga mayor al id
+    #articulos = Article.objects.filter(id__gt=10)
+
+    #en el id gte=graden than igual contenga mayor  o igual  que id
+    #articulos = Article.objects.filter(id__gte=10)
+
+    #en el id lt= menores que id
+    #articulos = Article.objects.filter(id__lt=10)
+
+    #en el id lt= menores he iguales que id
+    #articulos = Article.objects.filter(id__lte=10)
+
+
+
     return render(request,'articulos.html',{
         'articulos': articulos
     })

@@ -8,8 +8,10 @@ Articulos
         {% for articulo in articulos  %}
             <li> 
                 <h4>{{articulo.id}}. {{articulo.title}}</h4>
+                <span> {{articulo.created_at}} </span>
                 <p>
                     {{articulo.content}}
+                    <br/>
                     <a href="{% url 'borrar-articulo' id=articulo.id %}">Eliminar</a>
                 </p>
             </li>
