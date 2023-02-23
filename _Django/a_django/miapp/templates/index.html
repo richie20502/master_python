@@ -4,5 +4,11 @@ index
 {% endblock  %}
 {% block content  %}
 <h2 class="title"> Titulo de prueba</h2>
+{% if nombre  %}
+    <p>{{ nombre }} </p>
+{% else %}
+    <p> no existe el nombre</p>
+{% endif %}
+
 {% endblock  %}
  

@@ -17,7 +17,9 @@ def index(request):
         year += 1
     
     html += "</ul>"
-    return render(request, 'index.html')
+    return render(request, 'index.html',{
+        'nombre': "nombres"
+    })
 
 def hola_mundo(request):
     return render(request, 'hola_mundo.html')

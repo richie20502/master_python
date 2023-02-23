@@ -16,6 +16,11 @@ header{
     margin: 0px auto;
 }
 
+p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 #logotipo {
     width: 35%;
     height: 140px;
