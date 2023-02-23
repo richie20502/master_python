@@ -13,6 +13,9 @@ layout = """
         <li>
             <a href="/pagina">Pagina</a>
         </li>
+        <li>
+            <a href="/contacto">Contacto</a>
+        </li>
     </ul>
     <hr/>
 """
@@ -41,5 +44,5 @@ def pagina(request):
     <h1>pagina web</h1> 
     """)
 
-def contacto(request, nombre, ap):
+def contacto(request, nombre="nombre", ap="apellido"):
     return HttpResponse(layout + f"<h1>Contacto {nombre} {ap} </h1>")
