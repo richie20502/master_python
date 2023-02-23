@@ -42,11 +42,11 @@ def contacto(request, nombre="nombre", ap="apellido"):
     return HttpResponse(layout + f"<h1>Contacto {nombre} {ap} </h1>")
 
 
-def crear_articulo(request):
+def crear_articulo(request,title,content,public):
     articulo = Article(
-        title = "primer articulo",
-        content = "contenido del articulo",
-        public = True
+        title = title,
+        content = content,
+        public = public
     )
     articulo.save()
     return HttpResponse("articulo :")
