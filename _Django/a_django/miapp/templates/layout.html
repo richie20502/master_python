@@ -1,0 +1,36 @@
+<!DOCTYPE>
+<html lang='es'>
+    <head>
+        <meta charset="utf-8" />
+        <title> {% block title %}{% endblock  %} | Django</title>
+    </head>
+    <body>
+        <h1>Inicio sitio</h1> 
+        <hr/>
+        <ul>
+            <li>
+                <a href="/inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="/hola">Hola </a>
+            </li>
+            <li>
+                <a href="/pagina">Pagina</a>
+            </li>
+            <li>
+                <a href="/contacto">Contacto</a>
+            </li>
+        </ul>
+        <hr/>
+
+        <div id="content">
+
+            {% block content %} 
+
+            {% endblock  %}
+        </div>
+        <footer>
+            MAster en python
+        </footer>
+    </body>
+</html>

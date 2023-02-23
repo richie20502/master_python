@@ -1,29 +1,12 @@
 from django.shortcuts import render, HttpResponse, redirect
 
 layout = """
-    <h1>Inicio sitio</h1> 
-    <hr/>
-    <ul>
-        <li>
-            <a href="/inicio">Inicio</a>
-        </li>
-        <li>
-            <a href="/hola">Hola </a>
-        </li>
-        <li>
-            <a href="/pagina">Pagina</a>
-        </li>
-        <li>
-            <a href="/contacto">Contacto</a>
-        </li>
-    </ul>
-    <hr/>
+    
 """
 
 # Create your views here.
 def index(request):
     html ="""
-    
     <ul>
     """
     year=2023
