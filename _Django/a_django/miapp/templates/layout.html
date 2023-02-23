@@ -17,16 +17,16 @@
         <nav>
             <ul>
                 <li>
-                    <a href="/inicio">Inicio</a>
+                    <a href="{% url 'index' %}">Inicio</a>
                 </li>
                 <li>
-                    <a href="/hola">Hola </a>
+                    <a href="{% url 'hola_mundo' %}">Hola </a>
                 </li>
                 <li>
-                    <a href="/pagina">Pagina</a>
+                    <a href="{% url 'pagina' %}">Pagina</a>
                 </li>
                 <li>
-                    <a href="/contacto">Contacto</a>
+                    <a href="{% url 'contacto' %}">Contacto</a>
                 </li>
             </ul>
         </nav>
