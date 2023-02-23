@@ -71,6 +71,7 @@ def editar_articulo(request, id):
 
 def articulos(request):
     articulos = Article.objects.all()
+    articulos = Article.objects.order_by('-id')[:3]
     return render(request,'articulos.html',{
         'articulos': articulos
     })
