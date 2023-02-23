@@ -1,5 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article, Category
+from django.db.models import Q
 
 layout = """
     
@@ -93,8 +94,13 @@ def articulos(request):
 
     #articulos = Article.objects.filter(id=1).exclude(public=True)
 
-    articulos = Article.objects.raw('SELECT * FROM miapp_article')
+    #articulos = Article.objects.raw('SELECT * FROM miapp_article')
 
+    """ 
+    articulos = Article.objects.filter(
+        Q(title__contains='') | Q(title__contains='')
+    )
+    """
 
     return render(request,'articulos.html',{
         'articulos': articulos
