@@ -14,7 +14,9 @@ index
 <h3> Listado de lenguajes de programación</h3>
 <ul>
     {% for lenguaje in  lenguajes %}
-    <li> {{ lenguaje }} </li>
+    <li>{{forloop.counter}} - {{ lenguaje }} </li>
+    {% empty %}
+        <p>NO HAY LENGUAJES A MOSTRAR</p>
     {% endfor %}
 </ul>
 
