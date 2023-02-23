@@ -43,5 +43,10 @@ pagina
         {{"<h1>estes</h1> <strong>es el texto</strong>"|striptags|wordcount}}    
     </p>
 
+    <p>
+        {% load filters %}
+        {{"nombre desarrollador full stack"|saludo|safe}}
+    </p>
+
 {% endblock  %}
 
