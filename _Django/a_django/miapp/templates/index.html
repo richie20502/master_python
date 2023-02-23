@@ -19,6 +19,16 @@ index
         <p>NO HAY LENGUAJES A MOSTRAR</p>
     {% endfor %}
 </ul>
+<p>Años hasta el 2050</p>
+<ul>
+    {% for year in years   %}
+        {% if  year|divisibleby:2 == True %}
+            <li>  {{ year }} </li>
+        {% endif %} 
+    {% endfor %}
+</ul>
 
 {% endblock  %}
+
+
  

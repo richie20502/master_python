@@ -10,6 +10,7 @@ def index(request):
     <ul>
     """
     year=2023
+    hasta = range(year, 2050)
     while year <= 2050:
         html +="<li>"
         html += str(year)    
@@ -19,7 +20,9 @@ def index(request):
     html += "</ul>"
     lenguajes =['php','js','python','java']
     return render(request, 'index.html',{
-        'nombre': "nombres", 'lenguajes': lenguajes
+        'nombre': "nombres", 
+        'lenguajes': lenguajes,
+        'years': hasta
     })
 
 def hola_mundo(request):
