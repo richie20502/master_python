@@ -40,3 +40,6 @@ def pagina(request):
     return HttpResponse(layout +"""
     <h1>pagina web</h1> 
     """)
+
+def contacto(request, nombre, ap):
+    return HttpResponse(layout + f"<h1>Contacto {nombre} {ap} </h1>")
