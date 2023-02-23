@@ -93,6 +93,7 @@ def articulos(request):
 
     #articulos = Article.objects.filter(id=1).exclude(public=True)
 
+    articulos = Article.objects.raw('SELECT * FROM miapp_article')
 
 
     return render(request,'articulos.html',{
