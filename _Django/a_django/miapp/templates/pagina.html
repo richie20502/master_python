@@ -3,6 +3,45 @@
 pagina 
 {% endblock  %}
 {% block content %}
-    <h1>pagina web</h1>
+    <h1 class="title">pagina web</h1>
+    <p>
+        {{"este es el texto"|cut:'e'}}
+    </p>
+    <p>
+        {{texto|default:"no hay nada texto por default"}}
+    </p>
+    <p>
+        {{lista|first}}
+    </p>
+    <p>
+        {{lista|last}}    
+    </p>
+    <p>
+        {{lista|random}}    
+    </p>
+    <p>
+        {{lista|join:', '}}    
+    </p>
+    <p>
+        {{lista|length}}    
+    </p>
+    <p>
+        {{"estes es el texto"|length}}    
+    </p>
+    <p>
+        {{"estes es el texto"|upper}}    
+    </p>
+    <p>
+        {{"ESTE ES EL TEXTO"|lower}}    
+    </p>
+
+    <p>
+        {{"<h1>estes</h1> <strong>es el texto</strong>"|striptags}}    
+    </p>
+
+    <p>
+        {{"<h1>estes</h1> <strong>es el texto</strong>"|striptags|wordcount}}    
+    </p>
+
 {% endblock  %}
 

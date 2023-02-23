@@ -33,7 +33,9 @@ def pagina(request, redirigir=0):
     if redirigir ==1:
         return redirect('/contacto/richie/recillas')
 
-    return render(request,'pagina.html')
+    return render(request,'pagina.html', {
+        'texto':'',
+        'lista':['uno','dos','tres']})
 
 def contacto(request, nombre="nombre", ap="apellido"):
     return HttpResponse(layout + f"<h1>Contacto {nombre} {ap} </h1>")
