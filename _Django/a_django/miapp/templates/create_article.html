@@ -5,6 +5,21 @@ Crear Articulo
 {% block content %}
 <h1 class="title">Crear articulo</h1>
 
+<form action=" {% url 'save_article' %} " method="GET">
+    <label for="title">Titulo</label>
+    <input type="text" name="title" >
+
+    <label for="content">Contenido</label>
+    <textarea name="content"> </textarea>
+
+    <label for="public">Publicado?</label>
+    <select name='public'>
+        <option value='1'>Si</option>
+        <option value='0'>No</option>
+    </select>
+    <input type="submit" value="Guardar"/>
+</form>
+
 {% endblock  %}
 
 

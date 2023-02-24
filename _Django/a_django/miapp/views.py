@@ -113,13 +113,16 @@ def borrar_articulos(request,id):
     return redirect('articulos')
 
 def save_article(request):
-    articulo = Article(
-        title = title,
-        content = content,
-        public = public
-    )
-    articulo.save()
-    return HttpResponse(f"Articulo creado : {articulo.title}")
+    if request.method == 'GET':
+        articulo = Article(
+            title = request.GET['title'],
+            content = request.GET['content'],
+            public = request.GET['public']
+            )
+        articulo.save()
+        return HttpResponse(f"Articulo creado : {articulo.title}")
+    else:
+        return HttpResponse("<h2> no se pude crear articulo </h2>")
 
 def create_article(request):
     return render(request, 'create_article.html')
