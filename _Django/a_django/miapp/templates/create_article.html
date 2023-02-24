@@ -5,7 +5,8 @@ Crear Articulo
 {% block content %}
 <h1 class="title">Crear articulo</h1>
 
-<form action=" {% url 'save_article' %} " method="GET">
+<form action=" {% url 'save_article' %} " method="POST">
+    {% csrf_token %}
     <label for="title">Titulo</label>
     <input type="text" name="title" >
 

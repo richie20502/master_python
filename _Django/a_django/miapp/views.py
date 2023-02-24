@@ -113,11 +113,11 @@ def borrar_articulos(request,id):
     return redirect('articulos')
 
 def save_article(request):
-    if request.method == 'GET':
+    if request.method == 'POST':
         articulo = Article(
-            title = request.GET['title'],
-            content = request.GET['content'],
-            public = request.GET['public']
+            title = request.POST['title'],
+            content = request.POST['content'],
+            public = request.POST['public']
             )
         articulo.save()
         return HttpResponse(f"Articulo creado : {articulo.title}")
