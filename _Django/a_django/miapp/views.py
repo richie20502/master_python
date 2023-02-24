@@ -111,3 +111,15 @@ def borrar_articulos(request,id):
     articulo = Article.objects.get(pk=id)
     articulo.delete()
     return redirect('articulos')
+
+def save_article(request):
+    articulo = Article(
+        title = title,
+        content = content,
+        public = public
+    )
+    articulo.save()
+    return HttpResponse(f"Articulo creado : {articulo.title}")
+
+def create_article(request):
+    return render(request, 'create_article.html')
