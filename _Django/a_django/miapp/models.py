@@ -13,6 +13,14 @@ class Article(models.Model):
         verbose_name = "Articulo"
         verbose_name_plural = "Articulos"
         ordering =['-created_at']
+    
+    def __str__(self):
+        if self.public:
+            public = "(publicado)"
+        else:
+            public = "(privado)"
+
+        return f"{self.title}  - {public}"
 
 
 class Category(models.Model):
