@@ -9,8 +9,16 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    class Meta:
+        verbose_name = "Articulo"
+        verbose_name_plural = "Articulos"
+
 
 class Category(models.Model):
     name = models.CharField(max_length=110)
     description = models.CharField(max_length=250)
     created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Categoria"
+        verbose_name_plural = "Categorias"

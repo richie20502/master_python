@@ -5,6 +5,13 @@ Crear Articulo
 {% block content %}
 <h1 class="title">Crear articulo</h1>
 
+{% if form.errors %}
+    <strong class="rojo">
+        Errores en los formularios
+        {{ form.errors }}
+    </strong>
+{% endif %}
+
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}

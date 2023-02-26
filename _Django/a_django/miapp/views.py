@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article, Category
 from django.db.models import Q
 from miapp.forms import FormArticle
+from django.contrib import messages
 
 layout = """
     
@@ -144,6 +145,10 @@ def create_full_article(request):
                 content = request.POST['content'],
                 public = request.POST['public'])
             articulo.save()
+
+            messages.success(request, 'Has creado correctamente el articulo !!')
+
+
             return redirect('articulos')
     else:
         formulario = FormArticle()
