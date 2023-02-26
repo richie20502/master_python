@@ -11,7 +11,7 @@ class Article(models.Model):
 
     class Meta:
         verbose_name = "Articulo"
-        verbose_name_plural = "Articulos",
+        verbose_name_plural = "Articulos"
         ordering =['-created_at']
 
 
@@ -22,5 +22,5 @@ class Category(models.Model):
 
     class Meta:
         verbose_name = "Categoria"
-        verbose_name_plural = "Categorias",
+        verbose_name_plural = "Categorias"
         ordering =['created_at']
