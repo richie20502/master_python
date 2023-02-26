@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from miapp.models import Article, Category
 from django.db.models import Q
+from miapp.forms import FormArticle
 
 layout = """
     
@@ -126,3 +127,9 @@ def save_article(request):
 
 def create_article(request):
     return render(request, 'create_article.html')
+
+def create_full_article(request):
+    formulario = FormArticle()
+    return render(request,'create_full_article.html',{
+        'form' : formulario
+    })
