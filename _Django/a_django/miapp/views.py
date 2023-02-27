@@ -104,6 +104,8 @@ def articulos(request):
     )
     """
 
+    articulos = Article.objects.filter(public = True).order_by('-id')
+
     return render(request,'articulos.html',{
         'articulos': articulos
     })

@@ -25,6 +25,12 @@ header{
     margin-left: 20px;
     margin-bottom: 10px;
 }
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
 .box form{
     width: 40%;
 }
@@ -180,10 +186,62 @@ nav ul li a:hover{
     margin-top: 5px;
 }
 
+.article-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    clear: both;
+}
+
+.article-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden; 
+}
+
+.article-item .image img{
+    height: 200px;
+}
+
+
+.article-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+}
+
+.article-item h2{
+    display: block;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.article-item span.date{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.btn{
+    padding: 10px;
+    background: rgb(211, 59, 59);
+    color: white;
+    border: 1px solid black;
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+
 .rojo{
     color: red;
 }
-div .message{
+.message{
     padding: 20px;
     color: white;
     background-color: #1f7e58;
