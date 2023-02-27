@@ -41,7 +41,10 @@ urlpatterns = [
     path('create-full-form',miapp.views.create_full_article,name='article-full')
 ]
 #nombre del panel
-admin.site.site_header = "Master proyectos"
+title = "Master proyectos"
+admin.site.site_header =  title
+admin.site.site_title = title
+admin.site.index_title = "Aplicaciones"
 
 if settings.DEBUG:
     from django.conf.urls.static import static
