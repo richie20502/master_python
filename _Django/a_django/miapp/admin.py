@@ -10,3 +10,10 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Article,ArticleAdmin)
 admin.site.register(Category,CategoryAdmin)
+
+
+#nombre del panel
+title = "Master proyectos"
+admin.site.site_header =  title
+admin.site.site_title = title
+admin.site.index_title = "Aplicaciones"
