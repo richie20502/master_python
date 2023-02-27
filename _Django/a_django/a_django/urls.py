@@ -40,7 +40,8 @@ urlpatterns = [
     path('create-article', miapp.views.create_article,name="create_article"),
     path('create-full-form',miapp.views.create_full_article,name='article-full')
 ]
-
+#nombre del panel
+admin.site.site_header = "Master proyectos"
 
 if settings.DEBUG:
     from django.conf.urls.static import static
