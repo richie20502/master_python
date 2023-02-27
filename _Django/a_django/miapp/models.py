@@ -6,8 +6,8 @@ class Article(models.Model):
     content = models.TextField(verbose_name="Contenido")
     image = models.ImageField(default='null',verbose_name="Imagen")
     public = models.BooleanField(verbose_name="Publicado")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Creado')
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='Actualizado')
 
     class Meta:
         verbose_name = "Articulo"
@@ -26,7 +26,7 @@ class Article(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=110, verbose_name="Nombre")
     description = models.CharField(max_length=250, verbose_name="Descripcion")
-    created_at = models.DateTimeField(auto_now_add=True)
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Creado')
 
     class Meta:
         verbose_name = "Categoria"
