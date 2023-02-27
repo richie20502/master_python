@@ -6,7 +6,7 @@ class ArticleAdmin(admin.ModelAdmin):
     readonly_fields = ('created_at','updated_at')
  
 class CategoryAdmin(admin.ModelAdmin):
-    readonly_fields ='created_at'
+    readonly_fields = ('created_at','description')
 
 admin.site.register(Article,ArticleAdmin)
-admin.site.register(Category)
+admin.site.register(Category,CategoryAdmin)

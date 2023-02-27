@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf import  settings
 
 
 #from miapp import views
@@ -38,9 +39,9 @@ urlpatterns = [
     path('save-article',miapp.views.save_article, name="save_article"),
     path('create-article', miapp.views.create_article,name="create_article"),
     path('create-full-form',miapp.views.create_full_article,name='article-full')
-
-
-
-
-
 ]
+
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
