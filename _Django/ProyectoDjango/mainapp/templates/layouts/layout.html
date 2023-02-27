@@ -17,6 +17,14 @@
     </header>
     <nav>
         <ul>
+            {% for page in pages  %}
+            <li>
+                <a href="">
+                    {{page.1}}
+                </a>
+            </li>
+            
+            {% endfor %}
             <li>
                 <a href="{% url 'index' %}">Inicio</a>
             </li>
