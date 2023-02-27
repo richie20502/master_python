@@ -8,6 +8,7 @@ class Page(models.Model):
     # = models.TextField(verbose_name='Contenido')
     content = RichTextField(verbose_name='Contenido')
     slug = models.CharField(unique = True, max_length=150, verbose_name="URL amigable")
+    order = models.IntegerField(default=0,verbose_name='Orden')
     visible = models.BooleanField(verbose_name="Visible?") 
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Creado:")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Actualizado:")
