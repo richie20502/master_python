@@ -2,11 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title> {% block title %}{% endblock  %} | Django</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
 </head>
 <body>
+    <header>
+        <div id="logotipo">
+            <img src="{% static 'img/logo.png' %}" />
+            <h1> Sitio web con Django</h1>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="{% url 'index' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">nosostros</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+    <div id="content">
+        <div class="box">
+            
+                {% block content %} 
+
+                {% endblock  %}
+        </div>
+    </div>
     
 </body>
 </html>
