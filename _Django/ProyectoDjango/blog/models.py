@@ -7,6 +7,8 @@ class Category(models.Model):
     name = models.CharField(max_length=100, verbose_name="Nombre")
     description = models.CharField(max_length=255, verbose_name='Descripcion')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="Actualizado")
+
 
     class Meta:
         verbose_name = 'Categoria'
@@ -21,9 +23,9 @@ class Article(models.Model):
     image = models.ImageField(default='null', verbose_name='Imagenes')
     public = models.BooleanField(verbose_name='Publicado')
     user = models.ForeignKey(User,verbose_name="Usuario", on_delete=models.CASCADE)
-    categories = models.ManyToManyField(Category,verbose_name="Categorias", null=True, blank=True)
+    categories = models.ManyToManyField(Category,verbose_name="Categorias", blank=True)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Creado")
-    update_at = models.DateTimeField(auto_now=True, verbose_name="Actualizado")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="Actualizado")
 
     class Meta:
         verbose_name = 'Articulo'
